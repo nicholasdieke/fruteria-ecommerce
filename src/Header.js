@@ -35,11 +35,15 @@ const Header = ({
       bg="#fef7e6"
     >
       {/* onClick={() => router.push('/')} */}
-      <Text className="logo-text" textAlign="left">
+      <Text
+        className="logo-text"
+        fontSize={{ base: '14px', md: '20px' }}
+        textAlign="left"
+      >
         La Nueva Fresita De Castelló
       </Text>
-      <HStack spacing="1rem">
-        <InputGroup w="200px">
+      <HStack spacing={{ base: '0.5rem', md: '1rem' }}>
+        <InputGroup w={{ base: '150px', md: '200px' }}>
           <InputLeftElement
             pointerEvents="none"
             children={<FontAwesomeIcon icon={faSearch} />}
@@ -69,7 +73,7 @@ const Header = ({
         <Flex
           bg="primary"
           h="2.5rem"
-          w="5rem"
+          w={{ base: '3.5rem', md: '5rem' }}
           borderRadius="0.375rem"
           alignItems="center"
           justifyContent="center"

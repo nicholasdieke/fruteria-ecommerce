@@ -41,8 +41,8 @@ html {
 
 .item-img {
   object-fit: contain;
-  height: 120px;
-  max-width: 150px;
+  /* height: 120px; */
+  /* max-width: 150px; */
   width: auto;
 }
 
@@ -85,7 +85,7 @@ html {
 }
 
 .banner-img {
-  height: 300px;
+  /* height: 300px; */
   border-radius: 15px;
   background-position: center;
   background-repeat: no-repeat;

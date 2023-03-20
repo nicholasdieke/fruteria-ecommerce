@@ -15,10 +15,20 @@ const Item = ({ item, addToCart, removeFromCart, cart }) => {
   };
 
   return (
-    <Flex className="item-box" bg={item.color} justifyContent="space-between">
+    <Flex
+      className="item-box"
+      width={{ base: '100px', md: '230px' }}
+      bg={item.color}
+      justifyContent="space-between"
+    >
       <Flex w="100%" flexDir="column" alignItems="center">
         <Text className="item-text">{item.title}</Text>
-        <Image className="item-img" src={item.picture}></Image>
+        <Image
+          className="item-img"
+          height={{ base: '80px', md: '120px' }}
+          maxWidth={{ base: '100px', md: '150px' }}
+          src={item.picture}
+        ></Image>
       </Flex>
       {!!item.category && (
         <Flex alignItems="center" justifyContent="space-between" w="100%">

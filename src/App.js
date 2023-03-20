@@ -275,11 +275,12 @@ const App = () => {
     <Flex
       textAlign="center"
       fontSize="xl"
-      px="5rem"
+      px={{ base: '2rem', md: '5rem' }}
       bg="#fef7e6"
       minH="100vh"
       justifyContent="space-between"
       flexDir="column"
+      overflow="hidden"
     >
       <Flex flexDir="column">
         <Header
@@ -296,12 +297,18 @@ const App = () => {
           onClose={onClose}
           setCart={setCart}
         />
-        <Flex className="banner-img" bgImage="banner.jpg">
+        <Flex
+          className="banner-img"
+          h={{ base: '150px', md: '300px' }}
+          bgImage="banner.jpg"
+        >
           <Flex className="banner">
-            <Heading size="2xl" mb="0.5rem">
+            <Heading size={{ base: 'lg', md: '2xl' }} mb="0.5rem">
               La Nueva Fresita De Castelló
             </Heading>
-            <Text fontSize="24px">La boutique de la fruta desde 1944</Text>
+            <Text fontSize={{ base: '16px', md: '24px' }}>
+              La boutique de la fruta desde 1944
+            </Text>
           </Flex>
         </Flex>
         <CategoriesSection items={categories} />
