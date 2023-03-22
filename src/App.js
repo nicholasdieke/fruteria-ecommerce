@@ -293,6 +293,8 @@ const App = () => {
       justifyContent="space-between"
       flexDir="column"
     >
+      <title>La Nueva Fresita De Castelló Online Store</title>
+      <meta name="description">Browse the selection of fresh produce.</meta>
       <Flex flexDir="column">
         <Header
           cart={cart}
