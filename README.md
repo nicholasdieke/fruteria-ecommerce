@@ -37,7 +37,7 @@ Here are some of the features of the Madrid Online Grocery Store:
 - Browse products by category
 - Search for specific products
 - Add products to your cart
-- View your cart and adjust quantities
+- View your cart
 - Check out and complete your purchase
 
 ## Contributing
