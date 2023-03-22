@@ -212,7 +212,14 @@ const App = () => {
       '150g'
     ),
   ];
-  const categories = ['Fruits', 'Veggies', 'Nuts & Seeds', 'Berries', 'Herbs'];
+  const categories = [
+    'All',
+    'Fruits',
+    'Veggies',
+    'Nuts & Seeds',
+    'Berries',
+    'Herbs',
+  ];
 
   const [cart, setCart] = useState([]);
   const toast = useToast();
@@ -271,16 +278,20 @@ const App = () => {
     setInputText(lowerCase);
   };
 
+  const [visibleCategory, setVisibleCategory] = useState('All');
+  const onFilter = e => {
+    setVisibleCategory(e.target.innerText);
+  };
+
   return (
     <Flex
       textAlign="center"
       fontSize="xl"
-      px={{ base: '2rem', md: '5rem' }}
+      px={{ base: '1.5rem', md: '5rem' }}
       bg="#fef7e6"
       minH="100vh"
       justifyContent="space-between"
       flexDir="column"
-      overflow="hidden"
     >
       <Flex flexDir="column">
         <Header
@@ -311,45 +322,59 @@ const App = () => {
             </Text>
           </Flex>
         </Flex>
-        <CategoriesSection items={categories} />
-
-        <Section
-          addToCart={addToCart}
-          removeFromCart={removeFromCart}
-          title="Fruits"
-          items={filteredList(inputText, fruits)}
-          cart={cart}
-        />
-        <Section
-          addToCart={addToCart}
-          removeFromCart={removeFromCart}
-          title="Veggies"
-          items={filteredList(inputText, veggies)}
-          cart={cart}
-        />
-        <Section
-          addToCart={addToCart}
-          removeFromCart={removeFromCart}
-          title="Nuts & Seeds"
-          items={filteredList(inputText, nutsSeeds)}
-          cart={cart}
+        <CategoriesSection
+          items={categories}
+          onFilter={onFilter}
+          visibleCategory={visibleCategory}
         />
 
-        <Section
-          addToCart={addToCart}
-          removeFromCart={removeFromCart}
-          title="Berries"
-          items={filteredList(inputText, berries)}
-          cart={cart}
-        />
+        {(visibleCategory === 'Fruits' || visibleCategory === 'All') && (
+          <Section
+            addToCart={addToCart}
+            removeFromCart={removeFromCart}
+            title="Fruits"
+            items={filteredList(inputText, fruits)}
+            cart={cart}
+          />
+        )}
+        {(visibleCategory === 'Veggies' || visibleCategory === 'All') && (
+          <Section
+            addToCart={addToCart}
+            removeFromCart={removeFromCart}
+            title="Veggies"
+            items={filteredList(inputText, veggies)}
+            cart={cart}
+          />
+        )}
+        {(visibleCategory === 'Nuts & Seeds' || visibleCategory === 'All') && (
+          <Section
+            addToCart={addToCart}
+            removeFromCart={removeFromCart}
+            title="Nuts & Seeds"
+            items={filteredList(inputText, nutsSeeds)}
+            cart={cart}
+          />
+        )}
 
-        <Section
-          addToCart={addToCart}
-          removeFromCart={removeFromCart}
-          title="Herbs"
-          items={filteredList(inputText, herbs)}
-          cart={cart}
-        />
+        {(visibleCategory === 'Berries' || visibleCategory === 'All') && (
+          <Section
+            addToCart={addToCart}
+            removeFromCart={removeFromCart}
+            title="Berries"
+            items={filteredList(inputText, berries)}
+            cart={cart}
+          />
+        )}
+
+        {(visibleCategory === 'Herbs' || visibleCategory === 'All') && (
+          <Section
+            addToCart={addToCart}
+            removeFromCart={removeFromCart}
+            title="Herbs"
+            items={filteredList(inputText, herbs)}
+            cart={cart}
+          />
+        )}
         {filteredList(inputText, herbs).length +
           filteredList(inputText, berries).length +
           filteredList(inputText, nutsSeeds).length +

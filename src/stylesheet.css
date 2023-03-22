@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 5.5rem;
 }
 
 :target:before {
@@ -22,6 +21,19 @@ html {
 
 ::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
+}
+
+.category-box {
+  width: 190px;
+  color: white;
+  font-weight: 600;
+  border-radius: 500px;
+  margin-right: 0.75rem;
+  cursor: pointer;
+}
+
+.category-box:hover {
+  opacity: 0.8;
 }
 
 .item-box {
