@@ -1,8 +1,10 @@
-# Fruteria - Ecommerce
+# **Fruteria - Ecommerce**
 
 Welcome to the La Nueva Fresita De Castelló Online Store! This is a React app that allows you to shop for groceries online from the comfort of your own home. Browse the selection of fresh produce.
 
 [🔗 Visit La Nueva Fresita De Castelló Online Store](https://fruteria-ecommerce.vercel.app/)
+
+![alt text](public/fruteria-screenshot.png 'Screenshot of the Online Fruit Shop')
 
 ## How to Run the App Locally
 
@@ -39,6 +41,24 @@ Here are some of the features of the Madrid Online Grocery Store:
 - Add products to your cart
 - View your cart
 - Check out and complete your purchase
+
+## Technologies
+
+Here are some of the technologies of La Nueva Fresita De Castelló Online Store:
+
+- React
+- Chakra UI
+- Lottie
+- FontAwesome
+
+## Improvements
+
+Here are some of the improvements for v2 of La Nueva Fresita De Castelló Online Store:
+
+- A potential improvement for a 2.0 version could be to add the ability to modify the cart during the checkout process.
+- Additionally, the payments functionality could be developed.
+- Another potential improvement could be to move the items from the local variable to an external database.
+- This would ensure the scalability and reliability of the platform in the long term, as well as enabling greater flexibility and control over the data.
 
 ## Contributing
 
